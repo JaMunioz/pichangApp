@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="HomepageViewModel"
+            type="cl.uandes.pichangapp.ui.viewmodel.HomepageViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".ui.view.HomepageFragment">
+
+
+        <TextView
+            android:id="@+id/noMatchUp"
+            android:layout_width="350sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="212dp"
+            android:justificationMode="inter_word"
+            android:text="Oh, parece que hasta el momento, no te has registrado a ninguna pichanga, prueba intentar uniendote a una, o creando una. Por otra parte, si ya haz hecho una y no aparece tu pichanga, espera a que el internet haga lo suyo!"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Siguente_pichanga" />
+
+        <TextView
+            android:id="@+id/rulesHomepage"
+            android:layout_width="350sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Reglas: "
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/placeHomepage"
+            app:layout_constraintTop_toBottomOf="@+id/placeHomepage" />
+
+        <TextView
+            android:id="@+id/organizerHomepage"
+            android:layout_width="350sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Organizador: "
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Siguente_pichanga" />
+
+        <TextView
+            android:id="@+id/VisitorHomepage"
+            android:layout_width="350sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Visita: "
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/organizerHomepage"
+            app:layout_constraintTop_toBottomOf="@+id/organizerHomepage" />
+
+        <TextView
+            android:id="@+id/dateHomepage"
+            android:layout_width="350sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Fecha: "
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/categoryHomepage"
+            app:layout_constraintTop_toBottomOf="@+id/categoryHomepage" />
+
+        <TextView
+            android:id="@+id/hourHomepage"
+            android:layout_width="350sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Hora: "
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/dateHomepage"
+            app:layout_constraintTop_toBottomOf="@+id/dateHomepage" />
+
+        <TextView
+            android:id="@+id/placeHomepage"
+            android:layout_width="350sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Lugar: "
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/hourHomepage"
+            app:layout_constraintTop_toBottomOf="@+id/hourHomepage" />
+
+        <TextView
+            android:id="@+id/categoryHomepage"
+            android:layout_width="350sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Categoria: "
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/VisitorHomepage"
+            app:layout_constraintTop_toBottomOf="@+id/VisitorHomepage" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fighterListView"
+            android:layout_width="194dp"
+            android:layout_height="170dp"
+            android:scrollbars="vertical"
+            app:layout_constraintTop_toBottomOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="178dp" />
+
+        <TextView
+            android:id="@+id/Siguente_pichanga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Tu siguiente pichanga:"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="224dp"
+            android:layout_height="246dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+            app:srcCompat="@drawable/incognit" />
+
+        <ImageView
+            android:id="@+id/logoutHomepage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.044"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logout" />
+
+        <ImageView
+            android:id="@+id/profileHomepage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.955"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/user" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

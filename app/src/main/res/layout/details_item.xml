@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="DetailsItemViewModel"
+            type="cl.uandes.pichangapp.ui.viewmodel.DetailsItemViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fighterItemDetails2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        tools:context=".ui.view.Details">
+
+
+        <TextView
+            android:id="@+id/pointone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="168dp"
+            android:layout_marginTop="44dp"
+            android:text="V/S"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pointtwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="220dp"
+            android:layout_marginTop="44dp"
+            android:text="V/S"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/vs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="192dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="3dp"
+            android:text="V/S"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/fighterImageView"
+            android:layout_width="54sp"
+            android:layout_height="54sp"
+            android:layout_margin="8sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/hero_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/fighterImageView2"
+            android:layout_width="54sp"
+            android:layout_height="54sp"
+            android:layout_margin="8sp"
+            android:layout_weight="1"
+            android:contentDescription="@string/hero_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="402dp"
+            android:layout_height="667dp"
+            android:layout_weight="99"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="62dp"
+            tools:ignore="MissingConstraints">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="343dp"
+                android:layout_height="307dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.508"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pointOneInputText"
+                tools:context=".ui.view.Details" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="60dp"
+
+                android:text="Fecha:"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:text="Categoria:"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/place"
+                app:layout_constraintTop_toBottomOf="@+id/place" />
+
+            <TextView
+                android:id="@+id/rules"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:text="Reglas:"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/category"
+                app:layout_constraintTop_toBottomOf="@+id/category" />
+
+            <TextView
+                android:id="@+id/hour"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:text="Hora:"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/date"
+                app:layout_constraintTop_toBottomOf="@+id/date" />
+
+            <TextView
+                android:id="@+id/place"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+
+                android:text="Lugar:"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/hour"
+                app:layout_constraintTop_toBottomOf="@+id/hour" />
+
+            <Button
+                android:id="@+id/actionbutton"
+                android:layout_width="159dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="28dp"
+                android:backgroundTint="@color/button_defect"
+                android:text="Button"
+                app:layout_constraintEnd_toEndOf="@+id/rules"
+                app:layout_constraintTop_toBottomOf="@+id/rules" />
+
+            <Button
+                android:id="@+id/gobackButton"
+                android:layout_width="162dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="28dp"
+                android:backgroundTint="@color/button_defect"
+                android:text="Volver"
+                app:layout_constraintStart_toStartOf="@+id/rules"
+                app:layout_constraintTop_toBottomOf="@+id/rules" />
+
+            <EditText
+                android:id="@+id/pointOneInputText"
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+                android:background="@color/button_defect"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="X"
+                android:inputType="text"
+                android:paddingStart="12sp"
+                android:paddingTop="4sp"
+                android:text="@={DetailsItemViewModel.pointsOneLiveData}"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/actionbutton"
+                app:layout_constraintTop_toBottomOf="@+id/actionbutton" />
+
+
+            <EditText
+                android:id="@+id/pointTwoInputText"
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+                android:background="@color/button_defect"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="X"
+                android:inputType="text"
+                android:paddingStart="12sp"
+                android:paddingTop="4sp"
+                android:text="@={DetailsItemViewModel.pointsTwoLiveData}"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/actionbutton"
+                app:layout_constraintTop_toBottomOf="@+id/actionbutton" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/TeamOneName"
+            android:layout_width="121dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/fighter_name"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/fighterImageView"
+            app:layout_constraintTop_toTopOf="@+id/fighterImageView" />
+
+        <TextView
+            android:id="@+id/TeamTwoName"
+            android:layout_width="121dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="156dp"
+            android:gravity="end"
+            android:text="@string/fighter_name"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/fighterImageView2"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toEndOf="@+id/fighterImageView"
+            app:layout_constraintTop_toTopOf="@+id/fighterImageView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

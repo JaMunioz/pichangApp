@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/login">
+    <fragment
+        android:id="@+id/homepage"
+        android:name="cl.uandes.pichangapp.ui.view.HomepageFragment"
+        android:label="homepage"
+        tools:layout="@layout/homepage" >
+        <action
+            android:id="@+id/action_homepage_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_homepage_to_create_pichanga"
+            app:destination="@id/create_pichanga" />
+        <action
+            android:id="@+id/action_homepage_to_pichanga_search"
+            app:destination="@id/pichanga_search" />
+        <action
+            android:id="@+id/action_homepage_to_profile"
+            app:destination="@id/profile" />
+        <action
+            android:id="@+id/action_homepage_to_user_pichangas"
+            app:destination="@id/user_pichangas" />
+        <action
+            android:id="@+id/action_homepage_to_selected_item"
+            app:destination="@id/selected_item" />
+        <action
+            android:id="@+id/action_homepage_to_details"
+            app:destination="@id/details" />
+        <action
+            android:id="@+id/action_homepage_self"
+            app:destination="@id/homepage" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="cl.uandes.pichangapp.ui.view.LoginFragment"
+        android:label="login"
+        tools:layout="@layout/login" >
+        <action
+            android:id="@+id/action_login_to_homepage"
+            app:destination="@id/homepage" />
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/register" />
+    </fragment>
+    <fragment
+        android:id="@+id/create_pichanga"
+        android:name="cl.uandes.pichangapp.ui.view.CreatePichangaFragment"
+        android:label="create_pichanga"
+        tools:layout="@layout/create_pichanga" >
+        <action
+            android:id="@+id/action_create_pichanga_to_homepage"
+            app:destination="@id/homepage" />
+        <action
+            android:id="@+id/action_create_pichanga_to_voucher"
+            app:destination="@id/voucher" />
+        <action
+            android:id="@+id/action_create_pichanga_self"
+            app:destination="@id/create_pichanga" />
+        <action
+            android:id="@+id/action_create_pichanga_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_create_pichanga_to_login2"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/pichanga_search"
+        android:name="cl.uandes.pichangapp.ui.view.PichangaSearchFragment"
+        android:label="pichanga_search"
+        tools:layout="@layout/pichanga_search" >
+        <action
+            android:id="@+id/action_pichanga_search_to_homepage"
+            app:destination="@id/homepage" />
+        <action
+            android:id="@+id/action_pichanga_search_to_create_pichanga"
+            app:destination="@id/create_pichanga" />
+        <action
+            android:id="@+id/action_pichanga_search_to_user_pichangas"
+            app:destination="@id/user_pichangas" />
+        <action
+            android:id="@+id/action_pichanga_search_to_selected_item"
+            app:destination="@id/selected_item" />
+        <action
+            android:id="@+id/action_pichanga_search_to_details"
+            app:destination="@id/details" />
+        <action
+            android:id="@+id/action_pichanga_search_self"
+            app:destination="@id/pichanga_search" />
+        <action
+            android:id="@+id/action_pichanga_search_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_pichanga_search_to_maps2"
+            app:destination="@id/maps2" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="cl.uandes.pichangapp.ui.view.ProfileFragment"
+        android:label="profile"
+        tools:layout="@layout/profile" >
+        <action
+            android:id="@+id/action_profile_to_homepage"
+            app:destination="@id/homepage" />
+        <action
+            android:id="@+id/action_profile_to_create_pichanga"
+            app:destination="@id/create_pichanga" />
+        <action
+            android:id="@+id/action_profile_to_user_pichangas"
+            app:destination="@id/user_pichangas" />
+        <action
+            android:id="@+id/action_profile_to_pichanga_search"
+            app:destination="@id/pichanga_search" />
+        <action
+            android:id="@+id/action_profile_to_history_pichangas"
+            app:destination="@id/history_pichangas" />
+        <action
+            android:id="@+id/action_profile_to_rate_pichangas"
+            app:destination="@id/rate_pichangas" />
+    </fragment>
+    <fragment
+        android:id="@+id/register"
+        android:name="cl.uandes.pichangapp.ui.view.RegisterFragment"
+        android:label="register"
+        tools:layout="@layout/register" >
+        <action
+            android:id="@+id/action_register_to_homepage"
+            app:destination="@id/homepage" />
+    </fragment>
+    <fragment
+        android:id="@+id/user_pichangas"
+        android:name="cl.uandes.pichangapp.ui.view.UserPichangasFragment"
+        android:label="user_pichangas"
+        tools:layout="@layout/user_pichangas" >
+        <action
+            android:id="@+id/action_user_pichangas_to_homepage"
+            app:destination="@id/homepage" />
+        <action
+            android:id="@+id/action_user_pichangas_to_pichanga_search"
+            app:destination="@id/pichanga_search" />
+        <action
+            android:id="@+id/action_user_pichangas_to_create_pichanga"
+            app:destination="@id/create_pichanga" />
+        <action
+            android:id="@+id/action_user_pichangas_to_rate_pichangas"
+            app:destination="@id/rate_pichangas" />
+        <action
+            android:id="@+id/action_user_pichangas_to_history_pichangas"
+            app:destination="@id/history_pichangas" />
+        <action
+            android:id="@+id/action_user_pichangas_to_selected_item"
+            app:destination="@id/selected_item" />
+        <action
+            android:id="@+id/action_user_pichangas_to_details"
+            app:destination="@id/details" />
+        <action
+            android:id="@+id/action_user_pichangas_self"
+            app:destination="@id/user_pichangas" />
+        <action
+            android:id="@+id/action_user_pichangas_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/voucher"
+        android:name="cl.uandes.pichangapp.ui.view.VoucherFragment"
+        android:label="voucher"
+        tools:layout="@layout/voucher" >
+        <action
+            android:id="@+id/action_voucher_to_create_pichanga"
+            app:destination="@id/create_pichanga" />
+    </fragment>
+    <fragment
+        android:id="@+id/rate_pichangas"
+        android:name="cl.uandes.pichangapp.ui.view.RatePichangasFragment"
+        android:label="rate_pichangas"
+        tools:layout="@layout/rate_pichangas" >
+        <action
+            android:id="@+id/action_rate_pichangas_to_user_pichangas"
+            app:destination="@id/user_pichangas" />
+        <action
+            android:id="@+id/action_rate_pichangas_to_history_pichangas"
+            app:destination="@id/history_pichangas" />
+        <action
+            android:id="@+id/action_rate_pichangas_to_selected_item"
+            app:destination="@id/selected_item" />
+        <action
+            android:id="@+id/action_rate_pichangas_to_details"
+            app:destination="@id/details" />
+        <action
+            android:id="@+id/action_rate_pichangas_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/history_pichangas"
+        android:name="cl.uandes.pichangapp.ui.view.HistoryPichangasFragment"
+        android:label="history_pichangas"
+        tools:layout="@layout/history_pichangas" >
+        <action
+            android:id="@+id/action_history_pichangas_to_rate_pichangas"
+            app:destination="@id/rate_pichangas" />
+        <action
+            android:id="@+id/action_history_pichangas_to_user_pichangas"
+            app:destination="@id/user_pichangas" />
+        <action
+            android:id="@+id/action_history_pichangas_to_selected_item"
+            app:destination="@id/selected_item" />
+        <action
+            android:id="@+id/action_history_pichangas_to_details"
+            app:destination="@id/details" />
+        <action
+            android:id="@+id/action_history_pichangas_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/selected_item"
+        android:name="cl.uandes.pichangapp.Selected"
+        android:label="Selected_item" />
+    <fragment
+        android:id="@+id/details"
+        android:name="cl.uandes.pichangapp.ui.view.Details"
+        android:label="details_item"
+        tools:layout="@layout/details_item" >
+        <action
+            android:id="@+id/action_details_to_pichanga_search"
+            app:destination="@id/pichanga_search" />
+        <action
+            android:id="@+id/action_details_to_user_pichangas"
+            app:destination="@id/user_pichangas" />
+        <action
+            android:id="@+id/action_details_to_rate_pichangas"
+            app:destination="@id/rate_pichangas" />
+        <action
+            android:id="@+id/action_details_to_history_pichangas"
+            app:destination="@id/history_pichangas" />
+        <action
+            android:id="@+id/action_details_to_homepage"
+            app:destination="@id/homepage" />
+    </fragment>
+    <fragment
+        android:id="@+id/maps2"
+        android:name="cl.uandes.pichangapp.ui.view.Maps"
+        android:label="Maps" >
+        <action
+            android:id="@+id/action_maps2_to_pichanga_search"
+            app:destination="@id/pichanga_search" />
+    </fragment>
+</navigation>

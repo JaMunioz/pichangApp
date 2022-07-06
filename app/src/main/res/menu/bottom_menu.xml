@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id='@+id/user_pichangas'
+        android:icon="@drawable/ic_pichangas"
+        android:contentDescription="@string/mis_pichangas"
+        android:title="@string/mis_pichangas"/>
+    <item
+        android:id='@+id/pichanga_search'
+        android:icon="@drawable/ic_search"
+        android:contentDescription="@string/search_pichanga"
+        android:title="@string/search_pichanga"/>
+    <item
+        android:id='@+id/create_pichanga'
+        android:contentDescription="@string/crear_pichanga"
+        android:icon="@drawable/ic_create"
+        android:title="@string/crear_pichanga"/>
+
+    <item
+        android:id='@+id/homepage'
+        android:icon="@drawable/ic_home"
+        android:contentDescription="@string/homepage"
+        android:title="@string/homepage"/>
+
+</menu>

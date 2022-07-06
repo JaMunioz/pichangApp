@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="CreatePichangaViewModel"
+            type="cl.uandes.pichangapp.ui.viewmodel.CreatePichangaViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".ui.view.CreatePichangaFragment">
+
+        <ImageView
+            android:id="@+id/profileCreate"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.955"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/user" />
+
+        <ImageView
+            android:id="@+id/logoutCreatePichanga"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.044"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logout" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/placeInput"
+            app:layout_constraintTop_toBottomOf="@+id/placeInput">
+
+            <RadioButton
+                android:id="@+id/PlaceOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> CreatePichangaViewModel.set(1)}"
+                android:text="Fortín Cruzado"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/PlaceTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> CreatePichangaViewModel.set(2)}"
+                android:text="Club Ote. de Futbol"
+                android:textColor="@color/white" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/from_create_to_homepage"
+            android:layout_width="376dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/button_defect"
+            android:onClick="@{() -> CreatePichangaViewModel.register()}"
+            android:text="Crear"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.542"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rulesInputText" />
+
+        <TextView
+            android:id="@+id/dateInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="84dp"
+            android:text="Fecha"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/hourInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text="Hora"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            app:layout_constraintStart_toStartOf="@+id/dateInputText"
+            app:layout_constraintTop_toBottomOf="@+id/dateInputText" />
+
+        <EditText
+            android:id="@+id/hourInputText"
+            android:layout_width="330dp"
+            android:layout_height="36sp"
+            android:background="@color/button_defect"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="HH:MM"
+            android:inputType="text"
+            android:text="@={CreatePichangaViewModel.hourLiveData}"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/hourInput"
+            app:layout_constraintTop_toBottomOf="@+id/hourInput" />
+
+        <EditText
+            android:id="@+id/dateInputText"
+            android:layout_width="330dp"
+            android:layout_height="36sp"
+            android:background="@color/button_defect"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="YYYY-MM-DD"
+            android:inputType="text"
+            android:text="@={CreatePichangaViewModel.dateLiveData}"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/dateInput"
+            app:layout_constraintTop_toBottomOf="@+id/dateInput" />
+
+        <TextView
+            android:id="@+id/rulesInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="Reglas"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            app:layout_constraintStart_toStartOf="@+id/radioGroupPlace"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupPlace" />
+
+        <EditText
+            android:id="@+id/rulesInputText"
+            android:layout_width="330dp"
+            android:layout_height="36sp"
+            android:background="@color/button_defect"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Las reglas establecidas son..."
+            android:inputType="text"
+            android:text="@={CreatePichangaViewModel.rulesLiveData}"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/rulesInput"
+            app:layout_constraintTop_toBottomOf="@+id/rulesInput" />
+
+        <TextView
+            android:id="@+id/placeInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text="Lugar"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            app:layout_constraintStart_toStartOf="@+id/hourInputText"
+            app:layout_constraintTop_toBottomOf="@+id/hourInputText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

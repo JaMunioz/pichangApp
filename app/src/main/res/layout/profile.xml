@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="ProfileViewModel"
+            type="cl.uandes.pichangapp.ui.viewmodel.ProfileViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".ui.view.ProfileFragment"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="102dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/from_perfil_to_homepage"
+                android:layout_width="180dp"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/button_defect"
+                android:text="Volver"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="650dp" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="180dp"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/button_defect"
+                android:text="Editar"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="205dp"
+                tools:layout_editor_absoluteY="650dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/equipo"
+            android:layout_width="96dp"
+            android:layout_height="94dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del equipo"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/NameOfTeam"
+            app:layout_constraintStart_toStartOf="@+id/NameOfTeam" />
+
+        <EditText
+            android:id="@+id/NameOfTeam"
+            android:layout_width="270dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="93dp"
+            android:background="@color/button_defect"
+            android:ems="10"
+            android:inputType="text"
+            android:paddingHorizontal="10sp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/equipo"
+            app:layout_constraintEnd_toEndOf="@+id/equipo" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Email"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/NameOfTeam"
+            app:layout_constraintTop_toBottomOf="@+id/NameOfTeam" />
+
+        <EditText
+            android:id="@+id/emailProfile"
+            android:layout_width="285dp"
+            android:layout_height="32dp"
+            android:background="@color/button_defect"
+            android:ems="10"
+            android:inputType="text"
+            android:paddingHorizontal="10sp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textView26"
+            app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Categoría"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/passwordProfile"
+            app:layout_constraintTop_toBottomOf="@+id/passwordProfile" />
+
+        <EditText
+            android:id="@+id/categoryProfile"
+            android:layout_width="285dp"
+            android:layout_height="32dp"
+            android:background="@color/button_defect"
+            android:ems="10"
+            android:inputType="text"
+            android:paddingHorizontal="10sp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textView28"
+            app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="40dp"
+            android:text="Contraseña"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/emailProfile"
+            app:layout_constraintTop_toBottomOf="@+id/emailProfile" />
+
+        <EditText
+            android:id="@+id/passwordProfile"
+            android:layout_width="285dp"
+            android:layout_height="32dp"
+            android:background="@color/button_defect"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:paddingHorizontal="10sp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textView27"
+            app:layout_constraintTop_toBottomOf="@+id/textView27" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

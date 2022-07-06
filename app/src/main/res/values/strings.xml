@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Pichangapp</string>
+    <string name="loremipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget dignissim enim. Suspendisse ullamcorper, turpis a dapibus consequat, arcu sapien condimentum lectus, quis convallis nunc quam at arcu. Pellentesque at erat lacinia, lacinia ante sed, scelerisque nibh. Vivamus commodo tortor a nisi molestie, nec ultrices nibh pretium. Maecenas in sapien nec nibh elementum porttitor. Sed maximus maximus turpis, et maximus mi pretium elementum. Donec varius orci lacinia turpis fermentum, ut maximus arcu mattis. Fusce in dignissim leo. Integer pulvinar lacus eu lacus euismod, sit amet hendrerit ipsum consectetur.
+\n\n
+Vestibulum sed mauris at elit tristique mollis. Curabitur sapien dui, ullamcorper at venenatis nec, scelerisque vitae odio. Vivamus fringilla dui non tortor sagittis venenatis. Aliquam maximus nibh ac ligula rhoncus, in tristique leo congue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus pretium nulla tortor. Praesent ullamcorper, nulla a pharetra aliquet, erat turpis tempus lacus, nec fringilla elit elit at ligula. Nunc vestibulum varius lacus at rutrum. Cras facilisis in libero sed ullamcorper.
+\n\n
+Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec leo tempus, tempor quam vitae, consequat magna. Quisque in odio sed tellus congue venenatis quis in leo. Suspendisse ipsum libero, molestie sed massa sed, lobortis lobortis dolor. Ut tristique, lacus nec malesuada venenatis, nibh turpis porta libero, et condimentum erat lectus at nisi. Proin sit amet tortor non est aliquam efficitur eget malesuada odio. Sed sit amet dictum tellus.
+    </string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="intelligence">Intelligence</string>
+    <string name="strength">Strength</string>
+    <string name="speed">Speed</string>
+    <string name="login">Login</string>
+    <string name="email_hint">email@example.com</string>
+    <string name="password_hint">*******</string>
+    <string name="heroes_fight">Heroes Fight</string>
+    <string name="search_fighter">Search fighter</string>
+    <string name="fighter_details_button">Fighter details button</string>
+    <string name="hero_image">Hero image</string>
+    <string name="fighter_name">Fighter Name</string>
+    <string name="fighter_type">Fighter type</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="battle">Battle</string>
+    <string name="start_the_fight">Start the fight!</string>
+    <string name="profile">Profile</string>
+    <string name="crear_pichanga">Crear Pichanga</string>
+    <string name="homepage">Home</string>
+    <string name="mis_pichangas">Mis Pichangas</string>
+    <string name="search_pichanga">Search Pichanga</string>
+</resources>
